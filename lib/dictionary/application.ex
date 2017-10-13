@@ -6,6 +6,7 @@ defmodule Dictionary.Application do
 
     children = [
       worker(Dictionary.WordList, []),
+      worker(Dictionary.WordListTest, []),
     ]
     options = [
       name: Dictionary.Supervisor,
